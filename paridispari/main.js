@@ -2,9 +2,15 @@ const pariDispari = prompt("Inserisci la tua scelta tra pari e dispari");
 const myChoice = pariDispari.toLowerCase();
 const myNumber = Number(prompt("Inserisci un numero tra 1 e 5"));
 
-// if (myNumber < 1 || myNumber > 5) {
-//     console.log("Il numero inserito non è valido, aggiorna la pagina e riprova")
-// }
+ if (myNumber < 1 || myNumber > 5) {
+     alert("Il numero inserito non è valido, la pagina verrà aggiornata.")
+    location.reload();
+ }
+
+ if (myChoice !== "pari" || myChoice !== "dispari") {
+     alert("La scelta inserita non è valida, la pagina verrà aggiornata.");
+     location.reload();
+ }
 
 function randomNumberPC(min, max) {
     return Math.ceil(Math.random() * (max - min)) + min; 
